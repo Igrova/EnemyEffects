@@ -8,8 +8,8 @@
 		"igrova"
 	],
 	"contact": {
-		"homepage": "https://fabricmc.net/",
-		"sources": "https://github.com/FabricMC/fabric-example-mod"
+		"homepage": "https://modrinth.com/project/enemy-effects",
+		"sources": "https://github.com/Igrova/EnemyEffects"
 	},
 	"license": "MIT",
 	"icon": "assets/enemyeffects/icon.png",
