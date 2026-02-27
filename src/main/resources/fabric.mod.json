@@ -1,0 +1,37 @@
+{
+	"schemaVersion": 1,
+	"id": "enemyeffects",
+	"version": "${version}",
+	"name": "EnemyEffects",
+	"description": "Now you can see effects on player!",
+	"authors": [
+		"igrova"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/enemyeffects/icon.png",
+	"environment": "client",
+	"entrypoints": {
+		"main": [
+			"igrova.enemy.effects.EnemyEffectsMod"
+		],
+		"client": [
+			"igrova.enemy.effects.EnemyEffectsClient"
+		],
+		"modmenu": [
+			"igrova.enemy.effects.ModMenuIntegration"
+		]
+	},
+	"mixins": [
+		"enemyeffects.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.17.2",
+		"minecraft": "~1.16.5",
+		"java": ">=8",
+		"fabric": "*"
+	}
+}
