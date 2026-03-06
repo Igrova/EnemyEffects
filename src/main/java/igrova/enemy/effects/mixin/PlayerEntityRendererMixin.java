@@ -1,5 +1,6 @@
 package igrova.enemy.effects.mixin;
 
+import igrova.enemy.effects.EnemyEffectsClient;
 import igrova.enemy.effects.config.ModConfig;
 import me.shedaniel.autoconfig.AutoConfig;
 import net.minecraft.client.MinecraftClient;
@@ -33,7 +34,7 @@ public abstract class PlayerEntityRendererMixin {
 		List<StatusEffectInstance> activeEffects = new ArrayList<>();
 		for (StatusEffectInstance effect : player.getStatusEffects()) {
 			int duration = effect.getDuration();
-			if (duration > 0 || duration == -1) {
+			if (duration > 0) {
 				activeEffects.add(effect);
 			}
 		}
@@ -65,6 +66,7 @@ public abstract class PlayerEntityRendererMixin {
 			}
 		}
 		if (visibleEffects.isEmpty()) return;
+		if (!EnemyEffectsClient.isRenderingEnabled()) return;
 
 		// Рендерим только visibleEffects
 		matrices.push();
